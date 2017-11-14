@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/Generation-Test.iml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/workspace.xml
+build/empty/
+build/generated-sources/
+build/web/index.xhtml
