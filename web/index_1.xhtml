@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/WEB-INF/include/template.xhtml">
+        <ui:define name="head"> 
+            <title>Generation Test-In</title>
+            <!-- Custom styles for this template -->
+            <h:outputStylesheet name="styles/main.css"/>
+            <h:outputStylesheet name="css/font-awesome.min.css"/>
+        </ui:define>
+        <ui:define name="body" id="top">
+            <div class="site-wrapper">
+                <div class="site-wrapper-inner">
+                    <div class="cover-container">
+                        <div class="masthead clearfix">
+                            <div class="inner">
+                                <h3 class="masthead-brand">Generation</h3>
+                                <nav class="nav nav-masthead"></nav>
+                                <a class="nav-link nav-social" href="https://www.facebook.com/generationmexico/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a class="nav-link nav-social" href="https://twitter.com/generation_mex"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a class="nav-link nav-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a class="nav-link nav-social" href="https://www.instagram.com/generation_mexico/?hl=es"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>      <div class="inner cover">
+                            <h1 class="cover-heading">Generation Test-In</h1>
+                            <p class="lead cover-copy">Eres un buen programador/desarrollador web? Evalua tus conocimientos y verifica que tanto sabes!!</p>
+                            <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Login</button></p>
+                        </div>
+                        <div class="mastfoot">
+                            <div class="inner">
+                                <p>&copy; Your Company. Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a>.</p>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="subscribeModalLabel">Ingresa tus datos</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="form-control-label">Nombre:</label>
+                                                <h:inputText class="form-control" id="recipient-name" value="#{Respuestas.primera_p}" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="form-control-label">Apellido:</label>
+                                                <h:inputText class="form-control" id="recipient-name" value="#"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="form-control-label">Teléfono</label>
+                                                <input type="text" class="form-control" id="recipient-name" placeholder="(00) 00-00-00-00"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="form-control-label">E-mail</label>
+                                                <input type="text" class="form-control" id="recipient-name" placeholder="tu_nombre@ejemplo.com"></input>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default">Ingresa</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <h:outputScript name="resources/scripts/main.js"/>
+        </ui:define>
+    </ui:composition> 
+</html>

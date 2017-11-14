@@ -7,46 +7,42 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        $.ajax({
-        beforeSend: function(){
+
 
 
         <h:form id="primer-pregunta">
             Te llamas Rafa?
 
-            <h:inputText id="ipText" value="#{respuestas.primera_p}"/>
-            <h:selectOneListbox id="pregunta-uno" value = "#{respuestas.primera_p}"> 
+            <h:inputText id="ipText" value="#{Respuestas.primera_p}"/>
+            <h:selectOneListbox id="pregunta-uno" value = "#{Respuestas.primera_p}"> 
                 <f:selectItem itemValue = "si" itemLabel = "Sí" /> 
                 <f:selectItem itemValue = "no" itemLabel = "No" />
                 <f:ajax execute = "pregunta" render = "respuesta" />
             </h:selectOneListbox> 
 
             <h2>
-                <h:outputText id="respuesta" value="#{respuestas.primera_p != null ? respuestas.primera_p : ''}"/>
+                <h:outputText id="respuesta" value="#{Respuestas.primera_p != null ? Respuestas.primera_p : ''}"/>
             </h2>
             <h:commandButton id="btn1" value="Submit" action="segunda-pregunta">
                 <f:ajax  execute="primer-pregunta" render="segunda-pregunta"/>
             </h:commandButton>
         </h:form>
-        },
-        complete: function(){
-
 
         <!--<f:ajax event="onClick">-->
         <h:form id="segunda-pregunta" >
             Te llamas Astrid?
-            <h:inputText id="ipText" value="#{respuestas.primera_p}"/>
+            <h:inputText id="ipText" value="#{Respuestas.primera_p}"/>
             <h:commandButton id="btn1" value="Submit" action="Submit"/>
-            <h:selectOneMenu id="pregunta-dos" value = "#{respuestas.segunda_p}"> 
+            <h:selectOneMenu id="pregunta-dos" value = "#{Respuestas.segunda_p}"> 
                 <f:selectItem itemValue = "si" itemLabel = "Sí" /> 
                 <f:selectItem itemValue = "no" itemLabel = "No" />
                 <f:ajax execute = "pregunta-dos" render = "respuesta" />
             </h:selectOneMenu> 
             <h2>
-                <h:outputText id="respuesta" value="#{respuestas.segunda_p != null ? respuestas.segunda_p : ''}"/>
+                <h:outputText id="respuesta" value="#{Respuestas.segunda_p != null ? Respuestas.segunda_p : ''}"/>
             </h2>
         </h:form>
-        }
+
 
 
     </h:body>
